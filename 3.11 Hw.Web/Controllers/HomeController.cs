@@ -63,12 +63,12 @@ namespace _3._11_Hw.Web.Controllers
             {
                 vm.Message = "Invalid Password";
             }
-            if(password == image.Password)
+            else
             {
                 vm.ShowImage = true;
                 mgr.SetViews(id);
-
-            }          
+            }
+    
             List<int> ids = HttpContext.Session.Get<List<int>>("id");
             if (ids == null)
             {
